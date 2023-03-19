@@ -35,6 +35,28 @@ int Summa(int num)
     return summa;
 }
 
+int[] CreateArray(int size)
+{
+    int[] newArray = new int[size];
+    Console.WriteLine("Creating array here: ");
+
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Input {i + 1} element: ");
+        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+int CountOfPositive(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] > 0) count++;
+    return count;
+}
+
 /* Задача 27. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 452 -> 11
 82 -> 10
@@ -57,4 +79,13 @@ Console.Write("Input max possible value of elements: ");
 int max = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateRandomArray(m, min, max);
 PrintArray(array);
+*/
+
+/*Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.*/
+
+/*Console.Write("Input size of array: ");
+int m = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArray(m);
+PrintArray(array);
+Console.WriteLine("Amount of positive numbers: " + CountOfPositive(array));
 */
